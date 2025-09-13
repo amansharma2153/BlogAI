@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BlogAI - Saved Blogs</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gradient-to-r from-blue-100 via-purple-100 to-pink-100 min-h-screen flex flex-col">
+
+  <!-- Navbar -->
+  <nav class="bg-white shadow-md p-4 flex justify-between items-center">
+    <h1 class="text-2xl font-bold text-indigo-600">BlogAI</h1>
+    <ul class="flex gap-6">
+      <li><a href="index.html" class="text-gray-700 hover:text-indigo-500">Home</a></li>
+      <li><a href="blogs.html" class="text-gray-700 hover:text-indigo-500 font-semibold">Blogs</a></li>
+      <li><a href="about.html" class="text-gray-700 hover:text-indigo-500">About</a></li>
+    </ul>
+  </nav>
+
+  <!-- Page Header -->
+  <header class="text-center py-8">
+    <h2 class="text-3xl font-bold text-gray-800">Saved Blogs</h2>
+    <p class="text-gray-600 mt-2">Browse all blogs you have created and saved</p>
+  </header>
+
+  <!-- Blogs Container -->
+  <main class="flex-grow px-6 pb-10">
+    <div id="blogsContainer" class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+      
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-white shadow-inner py-4 text-center text-gray-600">
+    © 2025 BlogAI | Built with ❤️ + AI
+  </footer>
+
+  <script src="blogs.js"></script>
+</body>
+</html>
