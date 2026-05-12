@@ -2,7 +2,7 @@ const blogsContainer = document.getElementById("blogsContainer");
 
 async function loadBlogs() {
   try {
-    const res = await fetch("http://localhost:5000/api/blogs");
+    const res = await fetch("https://blogai-ekes.onrender.com/api/blogs");
     if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
     const blogs = await res.json();
 
