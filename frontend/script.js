@@ -42,7 +42,7 @@ function attachImageClick(img, url) {
 async function fetchTitleSuggestion() {
   if (!titleInput.value.trim()) return;
   try {
-    const res = await fetch("http://localhost:5000/api/suggest-title", {
+    const res = await fetch("https://blogai-ekes.onrender.com/api/suggest-title", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ topic: titleInput.value })
@@ -72,7 +72,7 @@ titleSuggestion.addEventListener("click", () => {
 async function fetchContentSuggestion() {
   if (!titleInput.value.trim()) return;
   try {
-    const res = await fetch("http://localhost:5000/api/suggest-content", {
+    const res = await fetch("https://blogai-ekes.onrender.com/api/suggest-content", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ topic: titleInput.value })
@@ -95,7 +95,7 @@ async function fetchContentSuggestion() {
 async function fetchImageSuggestions() {
   if (!titleInput.value.trim()) return;
   try {
-    const res = await fetch(`http://localhost:5000/api/images?query=${encodeURIComponent(titleInput.value)}`);
+    const res = await fetch(`https://blogai-ekes.onrender.com/api/images?query=${encodeURIComponent(titleInput.value)}`);
     const data = await res.json();
     imageContainer.innerHTML = "";
     if (data.length > 0) {
@@ -129,7 +129,7 @@ async function saveBlogAsPDF() {
     blogData.imageUrl = previewImage.src; // AI/Unsplash image
   }
 
-  const res = await fetch("http://localhost:5000/api/save-pdf", {
+  const res = await fetch("https://blogai-ekes.onrender.com/api/save-pdf", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(blogData),
@@ -161,7 +161,7 @@ async function saveBlog() {
   }
 
   try {
-    const res = await fetch("http://localhost:5000/api/blogs", {
+    const res = await fetch("https://blogai-ekes.onrender.com/api/blogs", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(blogData),
